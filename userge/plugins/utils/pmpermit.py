@@ -24,11 +24,9 @@ PMPERMIT_MSG = {}
 pmCounter: Dict[int, int] = {}
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = (
-    "Hello {fname} this is an automated message\n"
-    "Please wait until I answer or ping me in a group instead since I never read PMs"
-    "And please dont spam until then "
+    "hello {fname} this is an automated message, please go away because i will not answer your PM."
 )
-blocked_message = bk_blocked_message = "**You were automatically blocked**"
+blocked_message = bk_blocked_message = "**dEViL mODe trIgErEd**      d̴̢̛̩̺̺̮̣̼̗̤̫͈̮̉͛͒̋̍̄͂̄̉͑̈́̓̇̍̄̅̈̇̈́̄̆͒́͝͝͝į̴̨̨̡͚̹̟̭̣͕͉̗̜̟̼̭̙̦͈̎̓̌̾̇̐̋̿̌͋̄̀̊͊̐̿̎͋̀̈́͐͘͝͠ͅͅe̵̡̢̢̛̙̲͕̘̻̳͎̹̗̭̻̬̬͍̮̼͓̮͈͕̻̠̭͔̱̯̩͔͕̟̘͉͎̲͛̀̐̿̏͒͗̒̃̀͌̈́͋̉̃̆̈͐̀̾̽̀͂́̈̄̅̌̍̃́͐̿̂͌͗̈͂̄̿́̎̓͊̚̚͜͝͠͠ͅ"
 
 
 async def _init() -> None:
