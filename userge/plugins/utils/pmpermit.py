@@ -24,9 +24,9 @@ PMPERMIT_MSG = {}
 pmCounter: Dict[int, int] = {}
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = (
-    "hello {fname} this is an automated message, please go away because i will not answer your PM."
+    "Hello {fname} this is an automated message sent by my bot, please tag/ping me in a group since I don't allow PMs."
 )
-blocked_message = bk_blocked_message = "**dEViL mODe trIgErEd**      d̴̢̛̩̺̺̮̣̼̗̤̫͈̮̉͛͒̋̍̄͂̄̉͑̈́̓̇̍̄̅̈̇̈́̄̆͒́͝͝͝į̴̨̨̡͚̹̟̭̣͕͉̗̜̟̼̭̙̦͈̎̓̌̾̇̐̋̿̌͋̄̀̊͊̐̿̎͋̀̈́͐͘͝͠ͅͅe̵̡̢̢̛̙̲͕̘̻̳͎̹̗̭̻̬̬͍̮̼͓̮͈͕̻̠̭͔̱̯̩͔͕̟̘͉͎̲͛̀̐̿̏͒͗̒̃̀͌̈́͋̉̃̆̈͐̀̾̽̀͂́̈̄̅̌̍̃́͐̿̂͌͗̈͂̄̿́̎̓͊̚̚͜͝͠͠ͅ"
+blocked_message = bk_blocked_message = "You are automatically blocked for being such a douchebag."
 
 
 async def _init() -> None:
