@@ -32,8 +32,10 @@ PATH_ = f"{Config.CACHE_PATH}/spotify_database.json"
 # [---------------------------] Constants [------------------------------]
 KEY = "🎶"
 BIOS = [
-    KEY + " {title} - {interpret} | penk2109.github.io",
-    KEY + " {title} | penk2109.github.io",
+    KEY + " Vibing : {interpret} - {title}",
+    KEY + " : {interpret} - {title}",
+    KEY + " Vibing : {title}",
+    KEY + " : {title}",
 ]
 OFFSET = 1
 # reduce the OFFSET from our actual 70 character limit
@@ -519,7 +521,7 @@ async def now_playing_(message: Message):
     if r.status_code == 204:
         spolink = "\n**I'm not listening anything right now  ;)**"
     else:
-        spolink = f"🎶 [{spotify_bio_.title}]({spotify_bio_.link}) - {spotify_bio_.interpret} on AirPods Pro | @ping2109infos"
+        spolink = f"🎶 Vibing ; [{spotify_bio_.title}]({spotify_bio_.link}) - {spotify_bio_.interpret}"
     await message.edit(spolink)
 
 
@@ -565,7 +567,7 @@ async def sp_info_(message: Message):
         currently_playing_song_dur = f"{spotify_bio_.progress}/{spotify_bio_.duration}"
         # ==================ASSINGING_VAR_VLAUE=======================================#
         status_pn = f"""
-    **Device name:** Chinese barbie phone (ProPods Air của Dzinh™)
+    **Device name:** {device_name} ({device_type})
     **Device volume:** {device_vol}%
     **Currently playing song:** {currently_playing_song}
     **Duration:** {currently_playing_song_dur}
@@ -606,7 +608,7 @@ async def sp_recents_(message: Message):
     )
     recent_play = r.json()
     get_rec = recent_play["items"]
-    recent = "🎵 **Recently played songs:**\n | @ping2109infos"
+    recent = "🎵 **Recently played songs:**\n"
     for for_rec in get_rec:
         track = for_rec["track"]
         get_name = track["name"]
